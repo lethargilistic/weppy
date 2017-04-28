@@ -22,7 +22,7 @@ the following things:
 * show all posts' titles in reverse order (newest on top) to everyone on the index page
 * show the entire post on a specific page and allow registered users to comment
 
-> – hem, dude.. seems like quite a lot of stuff for a "micro" blogging application   
+> – hem, dude&hellip; seems like quite a lot of stuff for a "micro" blogging application   
 > – *relax! you'll see that every feature will be short work with weppy*
 
 Application structure
@@ -159,7 +159,7 @@ Moreover, we have set some *default* values (like the dates and the authors) and
 We've also added some validation, so we can prevent users from sending empty
 posts or comments.
 
-> **Note:** as you can see we imported the `now` method for the deault values of the datetime fields. This method can be quite useful since it will return alternatively the time of the request or the system current time, depending on the context. You can safely use it in your application whenever you need the actual time and you have no ensurance a request context is available.
+> **Note:** as you can see we imported the `now` method for the default values of the datetime fields. This method can be quite useful since it will return alternatively the time of the request or the system current time, depending on the context. You can safely use it in your application whenever you need the actual time and you have no insurance a request context is available.
 
 Initialize the database and the auth module
 -------------------------------------------
@@ -185,7 +185,7 @@ auth = Auth(app, db, user_model=User)
 db.define_models(Post, Comment)
 ```
 
-As you can see we configured the database to peform automatic migration of the schema – otherwise we need to [generate a migration](./dal/migrations) – and passed our `User` model to the auth module.
+As you can see we configured the database to perform automatic migration of the schema – otherwise we need to [generate a migration](./dal/migrations) – and passed our `User` model to the auth module.
 
 But, wait, how do we add an admin user who can write posts? We can write a `setup` function which allows us to do that. Let's write:
 
